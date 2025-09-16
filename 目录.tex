@@ -1,0 +1,39 @@
+
+% 2025 Mita
+
+% 目录 Content
+
+\newcounter{index}
+\newcommand\Part[1]{
+	\setcounter{index}{0}
+	\contentsline{section}{\Large $\bm{#1}$}{}{}
+	\vspace{-5pt}
+}
+\NewDocumentCommand\Article{d<>+ m}{
+	\IfNoValueTF{#1}{
+        \renewcommand{\sectionname}{#2}
+    }{
+        \renewcommand{\sectionname}{#1}
+    }
+	\contentsline{section}{
+		\labelfontC
+		\stepcounter{index}
+		\!\!\!\!\num[detect-all,minimum-integer-digits=2]{\arabic{index}}\quad
+    	\hyperref[-#2]{\sectionname}
+	}{
+    	\pageref{-#2}
+	}{}
+	\vspace{-7.5pt}
+}
+
+\begin{center}
+	\titlefontC\LARGE 目录\quad{\bf Content}
+\end{center}
+
+\Part{\gamma}
+\Article{初等函数导数表}
+\Article{裂项求和}
+\Article{三角恒等式}
+\Article{Taylor级数}
+
+\newpage
