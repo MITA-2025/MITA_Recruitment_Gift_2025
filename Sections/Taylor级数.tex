@@ -1,0 +1,133 @@
+
+% 2025 Mita
+
+% Sections/Taylor级数
+
+\heading{Taylor级数}
+
+\Formula{Taylor公式}{
+	任意阶可导函数 $f\braI{x}$ 在 $x=x_{0}$ 处的Taylor展开式为
+	\begin{align*}
+	    f\braI{x}=\sum_{k=0}^{n}\frac{f\fdn{k}\braI{x_{0}}}{k!}\braI{x-x_{0}}^{k}+R_{n}\braI{x}\ ,
+	\end{align*}
+    其中
+    \begin{align*}
+        R_{n}\braI{x}=\int_{x_{0}}^{x}\frac{f\fdn{n+1}\braI{t}}{n!}\braI{x-t}^{n}\rd t\ .
+    \end{align*}
+}
+
+\par 当余项 $R_{n}\braI{x}$ 对一切定义域内的 $x$ 均趋于零, 即
+\begin{align*}
+    \lim_{n\to\infty}R_{n}\braI{x}=0
+\end{align*}
+时, 我们有如下Taylor级数.
+
+\Formula{自然指数}{
+	$\FORALL{x}{\bR}$
+	\begin{align*}
+	    \re^{x}=\sum_{n=0}^{\infty}\frac{x^{n}}{n\,!}=1+x+\frac{x^{2}}{2}+\frac{x^{3}}{6}+\cdots\ .
+	\end{align*}
+}
+
+\Formula{自然对数}{
+	$\FORALL{x}{\left(\,-1\and 1\,\right]}$
+	\begin{align*}
+	    \ln\braI{x+1}=\sum_{n=1}^{\infty}\braI{-1}^{n+1}\frac{x^{n}}{n}=x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\frac{x^{4}}{4}+\cdots\ .
+	\end{align*}
+}
+
+\Formula{三角函数}{
+	$\FORALL{x}{\bR}$
+	\begin{align*}
+	    \sin x=\sum_{n=0}^{\infty}\braI{-1}^{n}\frac{x^{2n+1}}{\braI{2n+1}\,!}=x-\frac{x^{3}}{6}+\frac{x^{5}}{120}-\frac{x^{7}}{5040}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	\begin{align*}
+	    \cos x=\sum_{n=0}^{\infty}\braI{-1}^{n}\frac{x^{2n}}{\braI{2n}\,!}=1-\frac{x^{2}}{2}+\frac{x^{4}}{24}-\frac{x^{6}}{720}+\cdots\ ,
+	\end{align*}
+	$\FORALL{x}{\braI{-\sfrac{\pi}{2}\and\sfrac{\pi}{2}}}$
+	\begin{align*}
+	    \tan x=\sum_{n=0}^{\infty}\frac{\braIV{B_{2n}}\braI{16^{n}-4^{n}}x^{2n-1}}{\braI{2n}\,!}=x+\frac{1}{3}x^{3}+\frac{2}{15}x^{5}+\frac{17}{315}x^{7}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	\begin{align*}
+	    \sec x=\sum_{n=0}^{\infty}\frac{E_{2n}x^{2n}}{\braI{2n}\,!}=1+\frac{1}{2}x^{2}+\frac{5}{24}x^{4}+\frac{61}{720}x^{6}+\cdots\ ,
+	\end{align*}
+
+\newpage
+
+	$\FORALL{x}{\braI{-\pi\and\pi}}$
+	\begin{align*}
+	    \cot x=\frac{1}{x}-\sum_{n=1}^{\infty}\frac{4^{n}\braIV{B_{2n}}x^{2n-1}}{\braI{2n}\,!}=\frac{1}{x}-\frac{1}{3}x-\frac{1}{45}x^{3}-\frac{2}{945}x^{5}-\cdots\ ,\\[-13mm]
+	\end{align*}
+	\begin{align*}
+	    \csc x=\frac{1}{x}+\sum_{n=1}^{\infty}\frac{\braIV{B_{2n}}\braI{4^{n}-2}x^{2n-1}}{\braI{2n}\,!}=\frac{1}{x}+\frac{1}{6}x+\frac{7}{360}x^{3}+\frac{31}{15120}x^{5}+\cdots\ .
+	\end{align*}
+}
+
+\Formula{双曲函数}{
+	$\FORALL{x}{\bR}$
+	\begin{align*}
+	    \sinh x=\sum_{n=0}^{\infty}\frac{x^{2n+1}}{\braI{2n+1}\,!}=x+\frac{x^{3}}{6}+\frac{x^{5}}{120}+\frac{x^{7}}{5040}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	\begin{align*}
+	    \cosh x=\sum_{n=0}^{\infty}\frac{x^{2n}}{\braI{2n}\,!}=1+\frac{x^{2}}{2}+\frac{x^{4}}{24}+\frac{x^{6}}{720}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	$\FORALL{x}{\braI{-\sfrac{\pi}{2}\and\sfrac{\pi}{2}}}$
+	\begin{align*}
+	    \tanh x=\sum_{n=0}^{\infty}\frac{B_{2n}\braI{16^{n}-4^{n}}x^{2n-1}}{\braI{2n}\,!}=x-\frac{1}{3}x^{3}+\frac{2}{15}x^{5}-\frac{17}{315}x^{7}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	\begin{align*}
+	    \sech x=\sum_{n=0}^{\infty}\braI{-1}^{n}\frac{E_{2n}x^{2n}}{\braI{2n}\,!}=1-\frac{1}{2}x^{2}+\frac{5}{24}x^{4}-\frac{61}{720}x^{6}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	$\FORALL{x}{\braI{-\pi\and\pi}}$
+	\begin{align*}
+	    \coth x=\frac{1}{x}+\sum_{n=1}^{\infty}\frac{4^{n}B_{2n}x^{2n-1}}{\braI{2n}\,!}=\frac{1}{x}+\frac{1}{3}x-\frac{1}{45}x^{3}+\frac{2}{945}x^{5}-\cdots\ ,\\[-13mm]
+	\end{align*}
+	\begin{align*}
+	    \csch x=\frac{1}{x}-\sum_{n=1}^{\infty}\frac{B_{2n}\braI{4^{n}-2}x^{2n-1}}{\braI{2n}\,!}=\frac{1}{x}-\frac{1}{6}x+\frac{7}{360}x^{3}-\frac{31}{15120}x^{5}+\cdots\ .
+	\end{align*}
+}
+
+\Formula{反三角函数}{
+	$\FORALL{x}{\braI{-1\and1}}$
+	\begin{align*}
+	    \arcsin x =\sum_{n=0}^{\infty}\frac{\braI{2n-1}\,!!\,x^{2n+1}}{\braI{2n}\,!!\braI{2n+1}}=x+\frac{1}{6}x^{3}+\frac{3}{40}x^{5}+\frac{5}{112}x^{7}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	$\FORALL{x}{\braII{-1\and1}}$
+	\begin{align*}
+	    \arctan x=\sum_{n=0}^{\infty}\braI{-1}^{n}\frac{x^{2n+1}}{2n+1}=x-\frac{x^{3}}{3}+\frac{x^{5}}{5}-\frac{x^{7}}{7}+\cdots\ .
+	\end{align*}
+}
+
+\Formula{pi的Leibniz展开式}<$\bm{\pi}$的Leibniz展开式>{
+	\begin{align*}
+	    \pi=4\arctan1=\sum_{n=0}^{\infty}\braI{-1}^{n}\frac{4}{2n+1}=4-\frac{4}{3}+\frac{4}{5}-\frac{4}{7}+\cdots\ .
+	\end{align*}
+}
+
+\newpage
+
+\Formula{反双曲函数}{
+	$\FORALL{x}{\braI{-1\and1}}$
+	\begin{align*}
+	    \arsinh x=\sum_{n=0}^{\infty}\braI{-1}^{n}\frac{\braI{2n-1}\,!!\,x^{2n+1}}{\braI{2n}\,!!\braI{2n+1}}=x-\frac{1}{6}x^{3}+\frac{3}{40}x^{5}-\frac{5}{112}x^{7}+\cdots\ ,\\[-13mm]
+	\end{align*}
+	$\FORALL{x}{\braI{-1\and1}}$
+	\begin{align*}
+	    \artanh x=\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1}=x+\frac{x^{3}}{3}+\frac{x^{5}}{5}+\frac{x^{7}}{7}+\cdots\ .
+	\end{align*}
+}
+
+\par 根据反双曲函数的定义我们有
+\begin{align*}
+	\artanh x=\frac{1}{2}\ln\frac{1+x}{1-x}\ ,
+\end{align*}
+其中用 $x$ 代换 $\sfrac{\braI{1+x}}{\braI{1-x}}$ 可以得到下面这个应用更广泛的表达式:
+
+\Formula{快速对数展开式}{
+	$\FORALL{x}{\braI{0\and+\infty}}$
+	\begin{align*}
+	    \ln x=\sum_{n=0}^{\infty}\frac{2}{2n+1}\braI{\frac{x-1}{x+1}}^{2n+1}=2\braI{\frac{x-1}{x+1}}+\frac{2}{3}\braI{\frac{x-1}{x+1}}^{3}+\frac{2}{5}\braI{\frac{x-1}{x+1}}^{5}+\cdots\ .
+	\end{align*}
+}
+
+\newpage
